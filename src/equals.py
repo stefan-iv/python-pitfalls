@@ -32,7 +32,7 @@ class KeyValue:
         self.name = name
         self.value = value
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return f"KeyValue(name='{self.name}', value='{self.value}')"
 
 
@@ -40,7 +40,7 @@ obj1 = KeyValue("k1", "obviously equal")
 obj2 = KeyValue("k1", "obviously equal")
 obj3 = KeyValue("k2", "obviously different")
 
-rprint(f"{obj1=}\n{obj2=}\n{obj3=}")
+rprint(f"obj1={obj1}\nobj2={obj2}\nobj3={obj3}")
 
 rprint(f"obj1 equals obj2: {obj1 == obj2}")  # Should be True
 rprint(f"obj1 equals obj3: {obj1 == obj3}")  # Should be False

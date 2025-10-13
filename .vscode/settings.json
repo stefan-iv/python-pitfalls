@@ -21,5 +21,7 @@
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "git.autorefresh": true,
     "python.terminal.activateEnvironment": true,
-    "python.terminal.activateEnvInCurrentTerminal": true
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "terminal.integrated.fontSize": 18,
+    "editor.mouseWheelZoom": true
 }

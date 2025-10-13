@@ -1,0 +1,22 @@
+{
+	"include": [
+		"."
+	],
+	"exclude": [
+		"dev",
+		".venv",
+		"tmp"
+	],
+	"ignore": [
+		".venv"
+	],
+	"stubPath": "",
+	"typeCheckingMode": "strict",
+	"reportMissingImports": "error",
+	"reportMissingTypeStubs": false,
+	"reportGeneralTypeIssues": true,
+	"reportUnknownArgumentType": "information",
+	"reportUnnecessaryTypeIgnoreComment": "error",
+	"reportIncompatibleMethodOverride": "error",
+	"executionEnvironments": []
+}

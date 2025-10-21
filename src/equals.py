@@ -14,9 +14,9 @@ rprint(f"a equals c: {a == c}")  # Should be False
 rprint("\nString equality")
 rprint("=" * 40)
 
-s = "abc" * 3
-t = "abc" * 3
-u = "abc" * 4
+s = "HELLO"
+t = "HELLO"
+u = "Y" + s[1:] + "W"
 
 rprint(f"{s=}, {t=}, {u=}")
 rprint(f"s equals t: {s == t}")  # Should be True

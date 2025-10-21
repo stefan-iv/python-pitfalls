@@ -1,31 +1,27 @@
 from rich import print as rprint
 
 
-def log_event(event: str, buffer: list[str] = []) -> list[str]:
-    buffer.append(event)
-    return buffer
+def validate_user(user: dict[str, str], errors: list[str] = []) -> list[str]:
+    if not user.get("email"):
+        errors.append("Missing email")
+    if not user.get("age"):
+        errors.append("Missing age")
+    return errors
 
 
-rprint("=== Demonstrating Mutable Default Parameter ===")
-print()
+user1 = {"username": "alice"}
+validation1 = validate_user(user1)
 
-result1 = log_event("User login")
-rprint(f"After 'User login': {result1}")
-result2 = log_event("Page view")
-rprint(f"After 'Page view': {result2}")
-result3 = log_event("Button click")
-rprint(f"After 'Button click': {result3}")
+rprint("Validation errors for user:", user1)
+rprint(validation1)
 
+user2 = {"username": "bob", "email": "bob@example.com", "age": "30"}
+validation2 = validate_user(user2)
+rprint("Validation errors for user:", user2)
+rprint(validation2)
 
-my_buffer: list[str] = []
-result6 = log_event("Custom event 1", my_buffer)
-rprint(f"Custom buffer after event 1: {result6}")
-
-result7 = log_event("Custom event 2", my_buffer)
-rprint(f"Custom buffer after event 2: {result7}")
-
-
-rprint()
-rprint("Back to default buffer (still has previous events):")
-result8 = log_event("Another event")
-rprint(f"Default buffer continues from before: {result8}")
+custom_errors: list[str] = []
+user3 = {"username": "charlie", "age": "25"}
+validation3 = validate_user(user3, custom_errors)
+rprint("Validation errors for user:", user3)
+rprint(validation3)
